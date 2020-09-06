@@ -18,5 +18,7 @@ class handler(BaseHTTPRequestHandler):
         self.wfile.write(response.encode())
 
     def fetch_page(self, url):
+        if not url:
+            raise RuntimeError("Please append ?[URL] querystring.")
         url = unquote(url)
         return requests.get(url).text
