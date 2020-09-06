@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "builds": [{ "src": "*.py", "use": "@now/python" }],
+  "routes": [
+    { "src": "/.*", "dest": "/index.py" }
+   ],
+  "alias": "src.now.tomv.org.uk"
+}
